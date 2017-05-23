@@ -1,0 +1,7 @@
+{
+  "context-menu": {
+    ".card-list-view .card-list .card": [
+      {"label": "Delete Note", "command": "card-list-view:delete-note"}
+    ]
+  }
+}

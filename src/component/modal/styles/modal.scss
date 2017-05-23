@@ -1,0 +1,65 @@
+@import "ui-variables";
+
+.modal {
+  //display: none;
+  z-index: 9999;
+  top: 10%;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: $base-background-color;
+  padding: $component-padding;
+  max-height: 70%;
+  width: 30%;
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 2px;
+  will-change: top, opacity;
+  display: block;
+
+  box-shadow: $z-index-4;
+
+  h1,h2,h3,h4 {
+    margin-top: 0;
+  }
+
+  .modal-content {
+    padding: $component-padding;
+  }
+
+  .modal-close {
+    cursor: pointer;
+  }
+
+  .modal-footer {
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+
+    .btn, .btn-flat {
+      float: right;
+      margin: 6px 0;
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  //display: none;
+  display: block;
+  opacity: 0.5;
+
+  will-change: opacity;
+}

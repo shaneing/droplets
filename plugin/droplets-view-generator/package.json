@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "shaneing"
+  },
+  "bin": {
+    "droplet-view-generator": "./cli.js"
+  },
+  "dependencies": {},
+  "description": "generate droplet's package",
+  "devDependencies": {},
+  "license": "MIT",
+  "main": "index.js",
+  "name": "droplets-view-generator",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

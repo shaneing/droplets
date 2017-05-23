@@ -1,0 +1,96 @@
+@import "ui-variables";
+
+.card-list-view {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  cursor: default;
+  -webkit-user-select: none;
+  min-width: 250px;
+  width: 250px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $z-index-1;
+  padding: $component-padding;
+  overflow-y: auto;
+  
+  .nav {
+    background-color: $primary-color;
+  }
+
+  .card-list {
+
+    .card {
+
+      padding: 5px;
+
+      &.card:hover {
+        box-shadow: $z-index-1-haft-selected;
+      }
+
+      &.selected {
+        //color: #fff;
+        box-shadow: $z-index-1-haft-selected;
+      }
+
+      .card-content {
+
+        padding: 0;
+
+        .card-title {
+          font-weight: 500;
+          font-size: 15px;
+        }
+
+        .card-chips {
+          .chip {
+            height: $card-chip-height;
+            line-height: $card-chip-height;
+            border-radius: $card-chip-height / 2;
+            padding: 0 3px;
+            font-size: 12px;
+          }
+        }
+
+        .card-omitted {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 12px;
+          white-space: nowrap;
+          padding: 10px 0;
+        }
+      }
+
+      // modify by shaneing
+      .card-footer {
+        position: relative;
+        background-color: inherit;
+        border-top: 1px solid rgba(160,160,160,.2);
+        height: 32px;
+        line-height: 32px;
+
+        i {
+          margin-left: $component-icon-padding;
+          font-size: 18px;
+          vertical-align: middle;
+        }
+
+        .card-info {
+          float: right;
+        }
+      }
+
+      .card-status {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        .material-icons {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+.search-bar {
+  position: relative; }
+  .search-bar.card.focused, .search-bar.card:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+  .search-bar input#search {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    padding: 0 45px 0 15px; }
+    .search-bar input#search:focus {
+      box-shadow: none; }
+  .search-bar .material-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; }
+  .search-bar .dropdown-content {
+    width: 100%; }
+    .search-bar .dropdown-content li {
+      min-height: 25px; }
+      .search-bar .dropdown-content li > a, .search-bar .dropdown-content li > span {
+        font-size: 15px;
+        color: #ff4081;
+        display: block;
+        line-height: 15px;
+        padding: 5px 16px; }

@@ -1,0 +1,50 @@
+{
+  "name": "droplets",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^1.6.8",
+    "electron-config": "^1.0.0",
+    "electron-devtools-installer": "^2.2.0",
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-codemirror": "^1.0.0",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-form": "^6.7.0",
+    "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2",
+    "temp": "^0.8.3",
+    "underscore": "^1.8.3",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "foreman": "^2.0.0",
+    "node-sass-chokidar": "0.0.1",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path public/variables src/ -o src/ && node-sass-chokidar public/index.scss -o public/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path public/variables src/ -o src/ --watch",
+    "watch-index-css": "node-sass-chokidar public/index.scss -o public/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css watch-index-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start"
+  },
+  "homepage": "./"
+}

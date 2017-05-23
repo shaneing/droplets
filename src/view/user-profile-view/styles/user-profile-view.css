@@ -1,0 +1,71 @@
+.user-profile-view {
+  position: relative;
+  height: 200px;
+  cursor: default;
+  -webkit-user-select: none;
+  min-width: 200px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #2196F3;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #bbdefb; }
+  .user-profile-view .profile-header {
+    height: 48px;
+    text-align: center; }
+    .user-profile-view .profile-header .image {
+      text-align: center; }
+      .user-profile-view .profile-header .image .material-icons {
+        cursor: pointer; }
+    .user-profile-view .profile-header .btn {
+      height: 24px;
+      line-height: 24px;
+      margin: 12px auto; }
+  .user-profile-view .profile-content {
+    min-height: 16px;
+    text-align: center; }
+    .user-profile-view .profile-content .username {
+      font-weight: 600;
+      font-size: 15px; }
+  .user-profile-view .profile-footer .metrics {
+    flex: 1;
+    flex-direction: row;
+    text-align: center; }
+    .user-profile-view .profile-footer .metrics .metric {
+      position: relative;
+      margin: 15px 10px;
+      flex-direction: column;
+      display: inline-flex;
+      text-align: center; }
+      .user-profile-view .profile-footer .metrics .metric .digest {
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+        height: 15px; }
+      .user-profile-view .profile-footer .metrics .metric .name {
+        height: 15px;
+        font-size: 10px;
+        display: block; }
+
+.user-profile-view-modal {
+  position: relative; }
+  .user-profile-view-modal .btn {
+    margin-left: 20px;
+    float: right; }
+  .user-profile-view-modal .signin-modal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .user-profile-view-modal .signin-modal .material-icons {
+      color: #ff4081;
+      text-align: center; }
+  .user-profile-view-modal .signup-modal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .user-profile-view-modal .signup-modal .title {
+      text-align: center; }

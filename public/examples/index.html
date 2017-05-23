@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../iconfont/material-icons.css">
+    <link rel="stylesheet" href="../animation/animate.css">
+    <style>
+        .card-status {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .card-status .material-icons {
+
+        }
+    </style>
+</head>
+<body>
+<div style="overflow: scroll; height: 100%;">
+    <section>
+        <h1 class="animated zoomIn zoomOutRight">Fuck</h1>
+    </section>
+    <section>
+        <h1>Dropdown</h1>
+        <ul class="dropdown-content">
+            <li><a>Android</a></li>
+            <li>Android</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Button</h1>
+        <a href="#" class="btn">Click</a>
+        <a href="#" class="btn-floating"><i class="material-icons">edit</i></a>
+    </section>
+    <section>
+        <h1>Card</h1>
+
+    </section>
+    <section>
+        <h1>Chips</h1>
+        <div class="chip">Android</div>
+        <div class="chip">Linux</div>
+        <div class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input type="search">
+        </div>
+    </section>
+    <section>
+        <h1>Card List</h1>
+        <div style="width: 260px; height: 140px;">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">平凡的世界.md</span>
+                    <div class="card-chip">
+                        <div class="chip">Android</div>
+                        <div class="chip">Linux</div>
+                    </div>
+                    <p class="card-omitted">再见，我的朋友，再见，我的岁月，告别了，我们无忧无虑的少年时代</p>
+                </div>
+                <div class="card-footer">
+                    <i class="material-icons">edit</i>
+                    <i class="material-icons">edit</i>
+                    <span class="card-info">2017-05-20</span>
+                </div>
+                <div class="card-status">
+                    <i class="material-icons md-18 success-text">cloud_done</i>
+                    <i class="material-icons md-18 info-text">cloud_download</i>
+                    <i class="material-icons md-18 info-text">cloud_upload</i>
+                    <i class="material-icons md-18 error-text">cloud_off</i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>List</h1>
+        <ul>
+            <li>Android</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Form</h1>
+        <h2>Input Field</h2>
+        <div class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input type="text" id="name" placeholder="Username" onchange="handler(this)">
+        </div>
+        <div class="input-field">
+            <input id="email" type="text">
+            <label for="email"><i class="material-icons">search</i></label>
+        </div>
+        <h2>Switch</h2>
+        <form action="" onsubmit="alert('submit');">
+            <div class="input-field">
+                <input type="text">
+            </div>
+            <a class="btn" type="submit">Submit</a>
+        </form>
+    </section>
+    <section>
+        <h1>Pagination</h1>
+    </section>
+</div>
+</body>
+<script>
+	function handler(obj) {
+		console.log(obj);
+		console.log(obj.value);
+		console.log(obj.getAttribute('value'));
+	}
+</script>
+</html>

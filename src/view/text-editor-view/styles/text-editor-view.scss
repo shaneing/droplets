@@ -1,0 +1,52 @@
+@import "ui-variables";
+
+.text-editor-view {
+  overflow-y: scroll;
+  overflow-x: auto;
+  //height: 100%;
+
+  .text-editor {
+    position: relative;
+    height: 100%;
+    //overflow: hidden;
+    cursor: default;
+    -webkit-user-select: none;
+    min-width: 250px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $z-index-1;
+    padding: $component-padding;
+
+    .ReactCodeMirror {
+      height: 100%;
+
+      .CodeMirror {
+        height: auto;
+
+        .CodeMirror-gutters {
+          border: none;
+          background-color: #fff;
+        }
+
+        .CodeMirror-linenumber {
+          color: $secondary-color;
+        }
+
+        .CodeMirror-line {
+
+          &.span {
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+
+    .btn-floating {
+      right: 20px;
+      bottom: 20px;
+    }
+
+  }
+}

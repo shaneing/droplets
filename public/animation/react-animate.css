@@ -1,0 +1,11 @@
+@import "./animate.css";
+
+.fade-enter {
+    animation: 0.8s fadeInRight ease;
+}
+
+
+.fade-leave {
+    animation: fadeOut;
+}
+

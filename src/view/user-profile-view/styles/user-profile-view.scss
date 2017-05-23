@@ -1,0 +1,111 @@
+@import "ui-variables";
+
+.user-profile-view {
+
+  position: relative;
+  height: 200px;
+  cursor: default;
+  -webkit-user-select: none;
+  min-width: 200px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: $component-padding;
+  background-color: $primary-color;
+  box-shadow: $z-index-1;
+  color: $primary-color-light;
+
+  .profile-header {
+
+    height: 48px;
+    text-align: center;
+
+    .image {
+      text-align: center;
+
+      .material-icons {
+        cursor: pointer;
+      }
+    }
+
+    .btn {
+      height: 24px;
+      line-height: 24px;
+      margin: 12px auto;
+    }
+  }
+
+  .profile-content {
+    min-height: 16px;
+    text-align: center;
+    .username {
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+
+  .profile-footer {
+
+    .metrics {
+      flex: 1;
+      flex-direction: row;
+      text-align: center;
+
+      .metric {
+
+        position: relative;
+        margin: 15px 10px;
+        flex-direction: column;
+        display: inline-flex;
+        text-align: center;
+
+        .digest {
+          font-size: 14px;
+          font-weight: 700;
+          display: block;
+          height: 15px;
+        }
+
+        .name {
+          height: 15px;
+          font-size: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.user-profile-view-modal {
+  position: relative;
+
+  .btn {
+    margin-left: 20px;
+    float: right;
+  }
+
+  .signin-modal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .material-icons {
+      color: $secondary-color;
+      text-align: center;
+    }
+  }
+
+  .signup-modal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .title {
+      text-align: center;
+    }
+  }
+}
+

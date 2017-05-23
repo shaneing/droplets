@@ -1,0 +1,29 @@
+.text-editor-view {
+  overflow-y: scroll;
+  overflow-x: auto; }
+  .text-editor-view .text-editor {
+    position: relative;
+    height: 100%;
+    cursor: default;
+    -webkit-user-select: none;
+    min-width: 250px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px; }
+    .text-editor-view .text-editor .ReactCodeMirror {
+      height: 100%; }
+      .text-editor-view .text-editor .ReactCodeMirror .CodeMirror {
+        height: auto; }
+        .text-editor-view .text-editor .ReactCodeMirror .CodeMirror .CodeMirror-gutters {
+          border: none;
+          background-color: #fff; }
+        .text-editor-view .text-editor .ReactCodeMirror .CodeMirror .CodeMirror-linenumber {
+          color: #ff4081; }
+        .text-editor-view .text-editor .ReactCodeMirror .CodeMirror .CodeMirror-line.span {
+          word-wrap: break-word; }
+    .text-editor-view .text-editor .btn-floating {
+      right: 20px;
+      bottom: 20px; }

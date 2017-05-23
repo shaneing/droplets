@@ -1,0 +1,212 @@
+@import "ui-variables";
+
+.tree-view-resizer {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  cursor: default;
+  -webkit-user-select: none;
+  min-width: 212px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $z-index-1;
+  padding: $component-padding;
+
+  & > .order--start {
+    order: -10;
+  }
+  & > .order--center {
+    order: 0;
+  }
+  & > .order--end {
+    order: 10;
+  }
+
+  .tree-view-resize-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -5px;
+    width: 10px;
+    cursor: col-resize;
+    z-index: 3;
+  }
+
+  &[data-show-on-right-side='true'] {
+    .tree-view-resize-handle {
+      left: -5px;
+    }
+  }
+
+  &[data-show-on-right-side='false'] {
+    .tree-view-resize-handle {
+      right: -5px;
+    }
+  }
+}
+
+.project-root-header {
+  -webkit-user-drag: element;
+}
+
+.tree-view-scroller {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  //width: 100%;
+  overflow: auto;
+}
+
+.tree-view {
+  flex-grow: 1;
+  flex-shrink: 0;
+  /*
+   * Force a new stacking context to prevent a large, duplicate paint layer from
+   * being created for tree-view's scrolling contents that can make the cost of
+   * layer tree updates scale at 3x the size of the layer rather than the
+   * optimal 1x.
+   *
+   * On high resolution displays, Chromium handles layers for scrolling content
+   * differently and inadvertently creates a duplicate paint layer the size of
+   * .tree-view-scroller because descendants of the scroller overlap the
+   * auto-created layer.
+   */
+  isolation: isolate;
+  min-width: -webkit-min-content;
+  padding-left: $component-icon-padding;
+  padding-right: $component-padding;
+  position: relative;
+
+
+  .list-tree {
+
+
+    li {
+      padding-left: 22px;
+      margin-top: $component-icon-padding;
+      line-height: 1.5em;
+      position: relative;
+
+      .material-icons {
+        width: 18px;
+      }
+
+    }
+
+  }
+
+  .overlay {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    user-select: none;
+    z-index: -1;
+
+    &.selected {
+      background-color: $secondary-color-light;
+      //z-index: -1;
+    }
+
+  }
+
+  .header {
+
+    .material-icons {
+      vertical-align: middle;
+      width: 18px;
+    }
+
+    .title {
+      vertical-align: middle;
+      padding-left: $component-icon-padding;
+      font-size: 14px;
+    }
+
+    .tip {
+      color: $text-color-hint;
+      padding-left: $component-icon-padding;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+  }
+
+  .root {
+
+    position: static;
+
+    > .overlay {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      user-select: none;
+      line-height: 2em;
+      z-index: -1;
+
+      &.selected {
+        background-color: $secondary-color-light;
+      }
+
+    }
+
+    > .header {
+      line-height: 2em;
+
+      .title {
+        font-weight: 500;
+      }
+    }
+  }
+
+
+  /* Drag and Drop */
+  .placeholder {
+    position: absolute;
+    left: $component-icon-padding;
+    padding: 0;
+    z-index: 999;
+    display: inline-block;
+
+    //width: calc(~"100% -" $component-icon-padding);
+    background: $background-color-info;
+
+    list-style: none;
+    pointer-events: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      margin: -1px;
+      padding: 0;
+      width: inherit;
+      background: inherit;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      margin-top: -2px;
+      margin-left: -1px;
+      width: 4px;
+      height: 4px;
+      background: $background-color-info;
+      border-radius: 4px;
+      border: 1px solid transparent;
+    }
+
+    &:first-child {
+      margin-top: 1px;
+    }
+  }
+}
+
+.platform-win32 {
+  .tree-view-resizer {
+    .tree-view-resize-handle {
+      cursor: ew-resize;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "ui-variables";
+@import "markdown.scss";
+
+.preview-view {
+  overflow-y: scroll;
+
+  .markdown-preview {
+    //overflow-y: scroll;
+    position: relative;
+    height: 100%;
+    cursor: default;
+    -webkit-user-select: none;
+    min-width: 250px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $z-index-1;
+    padding: $component-padding;
+
+    .markdown-body {
+      li {
+        list-style: disc;
+      }
+    }
+
+    .btn-floating {
+      right: 20px;
+      bottom: 20px;
+    }
+
+
+  }
+
+}

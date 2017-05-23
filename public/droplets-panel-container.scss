@@ -1,0 +1,21 @@
+.droplets-panel-container {
+  &.left,
+  &.right {
+    display: flex;
+  }
+
+  & > .droplets-panel {
+    display: block;
+    position: relative;
+
+    &.left,
+    &.right {
+      display: flex;
+
+      & > * {
+        height: inherit;
+      }
+    }
+  }
+}
+

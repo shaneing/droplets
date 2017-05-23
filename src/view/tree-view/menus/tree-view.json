@@ -1,0 +1,10 @@
+{
+  "context-menu": {
+    ".tree-view li": [
+      {"label": "New Folder", "command": "tree-view:add-folder"},
+      {"label": "New Note", "command": "tree-view:add-note"},
+      {"label": "Delete", "command": "tree-view:delete-folder"},
+      {"label": "Rename", "command": "tree-view:rename-folder"}
+    ]
+  }
+}

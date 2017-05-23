@@ -1,0 +1,73 @@
+@import "ui-variables";
+
+.login-frameless-view{
+
+  position: relative;
+  cursor: default;
+  -webkit-user-select: none;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $z-index-1-haft;
+
+  .header {
+    position: static;
+    height: 150px;
+    background-color: $primary-color;
+
+    .title {
+      text-align: center;
+      color: $primary-color-light;
+      font-weight: 600;
+      font-size: 40px;
+      font-style: italic;
+
+    }
+
+    .close {
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  }
+
+  .content {
+    margin: 10px auto;
+    width: 250px;
+    position: relative;
+    height: 280px;
+
+    .input-field {
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    a {
+      float: right;
+      margin-top: 10px;
+    }
+
+  }
+
+  .footer {
+    width: 250px;
+    height: 150px;
+    border-top: 1px solid $text-color-divider;
+    margin: 0 auto;
+
+    .btn,
+    .btn-flat {
+      width: 100%;
+      margin-top: $component-padding;
+      text-align: center;
+    }
+  }
+
+}
