@@ -1,7 +1,7 @@
 Droplets
 ========
 
-Droplets，是用 [Electron](https://github.com/electron/electron) 和 [React](https://facebook.github.io/react/) 构建的桌面应用。
+Droplets，是用 [Electron](https://github.com/electron/electron) 和 [React](https://facebook.github.io/react/) 构建的桌面应用，同时它也是我的毕业设计。
 
 ![Droplets 示例图](https://github.com/shaneing/droplets/raw/master/doc/image/droplets-visitor-home.jpg)
 
@@ -39,16 +39,17 @@ npm run dev
 - 难度大
 - 一个人精力有限
 
-因此，我恳求对 Markdown 笔记有兴趣的同学，在空闲时，一起来『建筑』。我想未来要添加的功能：
+因此，我恳求对 Markdown 笔记有兴趣的同学，在空闲时，一起来『建筑』。我想未来要做的：
 
 - 编辑器优化
+- 渲染优化
 - 同步
 
 要思考的：
 
 - 如何把 [nodePPT](https://github.com/ksky521/nodePPT) 整合进来
 - 如何把 [Hexo](https://hexo.io/zh-cn/) 整合进来
-- 创建类似 [GitBook](https://www.gitbook.com/)
+- 创建类似 [GitBook](https://www.gitbook.com/) 的功能
 
 最后，其实我的技术方向是服务器端，所以能力可能有限。
 
@@ -62,3 +63,12 @@ npm run dev
 
 - [Materialize CSS](http://materializecss.com/)：基于 Material Design 的现代响应式前端框架
 - [Create React APP](https://github.com/facebookincubator/create-react-app)：快速创建 React App
+
+设计：
+
+- [Google Material](https://material.io/guidelines/)
+
+## 交流
+
+- QQ 群：643230573
+
