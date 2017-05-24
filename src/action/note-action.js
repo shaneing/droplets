@@ -4,7 +4,6 @@ import * as treeAction from './tree-action';
 
 export const SELECT_NOTE = 'SELECT_NOTE';
 export const LIST_NOTE = 'LIST_NOTE';
-export const LIST_SEARCH_NOTE = 'LIST_SEARCH_NOTE';
 export const UPDATE_STATUS_NOTE = 'UPDATE_STATUS_NOTE';
 export const DELETE_NOTE = 'DELETE_NOTE';
 
@@ -65,6 +64,16 @@ export const searchNote = (keyword = '') => (dispatch) => {
     searchPath: 'Note',
     keyword,
   }).then((notes) => {
+    dispatch(listNotes(notes));
+  }).catch((error) => {
+    if (error) {
+      dispatch(listNotes([]));
+    }
+  });
+};
+
+export const updateList = path => (dispatch) => {
+  remote.droplets.note.listNotes(path).then((notes) => {
     dispatch(listNotes(notes));
   }).catch((error) => {
     if (error) {
