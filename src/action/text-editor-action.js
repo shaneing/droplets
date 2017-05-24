@@ -1,5 +1,6 @@
 import * as previewActions from './preview-action';
 import * as remote from './../remote';
+import * as noteActions from './note-action';
 
 export const OPEN_TEXT_EDITOR = 'OPEN_TEXT_EDITOR';
 export const CLOSE_TEXT_EDITOR = 'CLOSE_TEXT_EDITOR';
@@ -44,6 +45,7 @@ export const closeTextEditorAndOpenMarkdownPreview = (content, path) => (dispatc
 
   promise.then(() => {
     dispatch(previewActions.openMarkdownPreview(content, path));
+    dispatch(noteActions.updateList(path.substring(0, path.lastIndexOf('/'))));
   });
 };
 
