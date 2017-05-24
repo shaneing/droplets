@@ -36,7 +36,7 @@ const childIds = (state, action) => {
         action.childId,
       ];
     case REMOVE_CHILD:
-      return state.filter(childId => childId != action.childId);
+      return state.filter(childId => `${childId}` !== action.childId);
     default:
       return state;
   }
