@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-function getArgs() {
-	return process.argv.splice(2);
-}
+
+const args = process.argv.splice(2);
 
 function getPackageName() {
-	return getArgs()[0];
+  return args[0];
 }
 
-let PackageGenerator = require('./');
-const pg = new PackageGenerator(getPackageName());
+const getClassName = () => args[1];
+
+const PackageGenerator = require('./');
+
+const pg = new PackageGenerator(getPackageName(), getClassName());
 pg.generate();
