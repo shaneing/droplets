@@ -3,7 +3,7 @@ Droplets
 
 Droplets，是用 [Electron](https://github.com/electron/electron) 和 [React](https://facebook.github.io/react/) 构建的桌面应用，同时它也是我的毕业设计。
 
-![Droplets 示例图](https://github.com/shaneing/droplets/raw/master/doc/image/droplets-visitor-home.jpg)
+![Droplets 示例图](https://github.com/shaneing/droplets/raw/master/doc/image/droplets-visitor-home.png)
 
 ## 构建
 
