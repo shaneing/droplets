@@ -18,29 +18,6 @@ npm run electron
 npm run dev
 ```
 
-## 应用背景及其展望
-
-因此喜欢上了 Markdown，并用它去写笔记。于是
-
-> 我想开发一个满足我需求的笔记应用
-
-但是，在开发这个应用时，发现
-
-- 难度大
-- 一个人精力有限
-
-因此，我恳求对 Markdown 笔记有兴趣的同学，在空闲时，一起来『建筑』。我想未来要做的：
-
-- 编辑器优化
-- Markdown 渲染优化
-- 增量同步
-
-要思考的：
-
-- 创建类似 [Hexo](https://hexo.io/zh-cn/) 的博客系统，其实有些博客我真不喜欢，连个 `TOC` 都没有
-- 创建类似 [GitBook](https://www.gitbook.com/) 的功能，用来写自己的书
-- 将用户的笔记连接起来，做一个笔记共享平台，实现知识共享
-
 ## 感谢
 
 算法：
@@ -55,8 +32,4 @@ npm run dev
 设计：
 
 - [Google Material](https://material.io/guidelines/)
-
-## 交流
-
-- QQ 群：643230573
 
