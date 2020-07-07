@@ -4,7 +4,7 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "electron": "^1.6.8",
+    "electron": "^9.1.0",
     "electron-config": "^1.0.0",
     "electron-devtools-installer": "^2.2.0",
     "moment": "^2.18.1",
